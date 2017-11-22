@@ -29,10 +29,11 @@ public class ColorRGBpanel extends javax.swing.JPanel implements ColorListener, 
         // Register to listen to changes in RGB fields 
         ColorRGBchangeListener changeRGBlistener = new ColorRGBchangeListener();
 
+        // Custom listener ?
         jIntegerFieldRed.getDocument().addDocumentListener(changeRGBlistener);
         jIntegerFieldGreen.getDocument().addDocumentListener(changeRGBlistener);
-//        jIntegerFieldBlue.getDocument().addDocumentListener(changeRGBlistener);
-        
+        //jIntegerFieldBlue.getDocument().addDocumentListener(changeRGBlistener);
+        // Or standard Document Listener ?
         jIntegerFieldBlue.getDocument().addDocumentListener(new DocumentListener (){
 
             @Override
